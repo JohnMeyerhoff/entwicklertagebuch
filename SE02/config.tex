@@ -1,0 +1,30 @@
+\setlength{\parindent}{0px}
+\newcommand{\alias} [2]{\@ifdefinable #1{\let #1 #2}}
+%\alias\realias\let
+\newcommand{\providealias}[2]{\@ifundefined #1{\let #1 #2}}
+
+\makeatletter
+\newcommand{\fixed@sra}{$\vrule height 2\fontdimen22\textfont2 width 0pt\shortrightarrow$}
+\newcommand{\shortarrow}[1]{%
+  \mathrel{\text{\rotatebox[origin=c]{\numexpr#1*45}{\fixed@sra}}}
+}
+\definecolor{method}{rgb}{0.2,0.2,1}
+\newcommand{\codeline}[1]{{\color{method}\texttt{#1}}}
+
+%command for z.\,B. ??
+
+
+
+\newcommand{\ThesisAuthorGivenName}{}
+\newcommand{\ThesisAuthorSurname}{John Meyerhoff}
+\newcommand{\ThesisAuthor}{\ThesisAuthorSurname}
+\newcommand{\ThesisKeywords}{Entwicklertagebuch Software Engineering SE02 2022}
+\newcommand{\ThesisLocation}{Sankt Augustin}
+\newcommand{\ThesisPubDate}{7. Juli 2022} %\today
+\newcommand{\ThesisSubject}{Entwicklertagebuch SE02}
+\newcommand{\ThesisStudyCourse}{Software Engineering 2}
+\newcommand{\ThesisStudyCourseGerman}{Informatik}
+\newcommand{\ThesisSubjectType}{Entwicklertagebuch}
+\newcommand{\ThesisSupervisorFirst}{Prof. Dr. Sascha Alda}
+\newcommand{\ThesisTitle}{Entwicklertagebuch}
+\newcommand{\ThesisType}{Bachelor}

@@ -1,0 +1,26 @@
+\documentclass[12pt,oneside,a4paper,titlepage]{article}
+\input{dependencies.tex}
+\input{config.tex}
+\makeglossaries
+\input{acronyms.tex}
+\bibliography{bibliography}
+%\nopagenumbers
+\begin{document}
+\input{cover.tex}
+\tableofcontents
+%generell
+\pagebreak
+\input{introduction.tex}
+\pagebreak
+
+
+\input{eidesstattliche.tex}
+\pagebreak
+\printbibliography[
+    heading=bibintoc,
+    title={Literaturverzeichnis}
+]
+%\pagebreak
+\glsaddall
+\printglossaries
+\end{document}
