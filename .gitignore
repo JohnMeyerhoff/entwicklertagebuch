@@ -277,3 +277,5 @@ TSWLatexianTemp*
 SE02/main.ist
 SE02/main.pdf
 .idea/*
+out/main.ist
+out/main.pdf
