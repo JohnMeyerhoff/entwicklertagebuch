@@ -1,22 +1,33 @@
 \section{Vorarbeiten}\label{sec:vorarbeiten}
 Vor dem Start des ersten Sprints habe ich mich
-mit der Anwendung Carlook und dem Framework
-Vaadin auseinandergesetzt.
+mit der Anwendung Carlook und dem Framework Vaadin auseinandergesetzt.
 Ich habe im Midterm bereits sehr intensiv mit GitHub gearbeitet und mit Klara kollaboriert.
-Der Einstieg war durch die bereits funktionsfähige App
-deutlich einfacher und angenehmer als erwartet.
+Der Einstieg war durch die bereits funktionsfähige App deutlich einfacher und angenehmer als erwartet.
+
+Anfangs habe ich das Carlook Repository in einem Blueprint branch hinzugefügt und die Dokumentation
+des Carlook-Programms als ``Blueprint.md`` umbenannt.
+Hier ergab sich schon eines der ersten \emph{Issues} , die Entfernung aller auto-bezogenen Aspekte
+des Repositorys.
 
 Die Dokumentation wollte ich eigentlich mithilfe einer Action selbst von Markdown zu PDF und HTML rendern, welche
 ich im Vorjahr mit Neo Hornberger um einige Features erweitert hatte.
 \section{Sprint 1}\label{sec:sprint1}
 Das bewerten der user stories in story points fiel anfangs etwas schwer, aber dadurch, dass wir mit 10 Gruppenmitgliedern
 deutlich mehr Erfahrung haben konnte Klara die Festlegung recht schleunig koordinieren.
+Als erstes Issue hatte ich schon recht früh die Registrierung implementiert.
+Dafür hatte ich mich in der Dokumentation von Vaadin in Components und Forms eingelesen.
+Der Aufbau des Forms wird wie auch bei den anderen Layouts in Vaadin durch die Reihenfolge bestimmt,
+in welcher die Components ( Textfelder und Buttons ) in das Formular eingefügt werden.
+
 \subsection{Woche 1}\label{subsec:woche1}
-In Absprache mit Gökhan stand eines der ersten Dev-Issues bereits fest: <u>Alles</u> was mit Autos zusammenhängt muss abgewandelt oder entfernt werden.
+In Absprache mit Gökhan stand eines der ersten Dev-Issues bereits fest: \emph{Alles} , was mit Autos
+zusammenhängt, muss abgewandelt oder entfernt werden.
 
 Nachdem die Erste View auf unsere App in der LoginView schon fertig war, galt es nun, diese zu verstehen und zu schauen,
 wie wir die Registrierung umsetzen.
 Dafür habe ich mich mit der Dokumentation von Vaadin Components und Vaadin Flow befasst.
 Mit der Wahl von JPA war dort auch klar, dass wir einen Service und ein Repository brauchen würden.
-
+Zum Prüfen, ob eine Registrierung erfolgreich war, habe ich eine Backend-View angelegt.
+Die Backend-View verwendet das Public-App-Layout und kann somit aktuell von allen Endanwendern
+geöffnet werden.
 
