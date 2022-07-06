@@ -6,11 +6,13 @@ Der Einstieg war durch die bereits funktionsfähige App deutlich einfacher und a
 
 Anfangs habe ich das Carlook Repository in einem Blueprint branch hinzugefügt und die Dokumentation
 des Carlook-Programms als ``Blueprint.md`` umbenannt.
-Hier ergab sich schon eines der ersten \emph{Issues} , die Entfernung aller auto-bezogenen Aspekte
+Hier ergab sich schon eines der ersten \emph{Issues}, die Entfernung aller auto-bezogenen Aspekte
 des Repositorys.
 
 Die Dokumentation wollte ich eigentlich mithilfe einer Action selbst von Markdown zu PDF und HTML rendern, welche
 ich im Vorjahr mit Neo Hornberger um einige Features erweitert hatte.
+
+
 \section{Sprint 1}\label{sec:sprint1}
 Das bewerten der user stories in story points fiel anfangs etwas schwer, aber dadurch, dass wir mit 10 Gruppenmitgliedern
 deutlich mehr Erfahrung haben konnte Klara die Festlegung recht schleunig koordinieren.
@@ -20,7 +22,7 @@ Der Aufbau des Forms wird wie auch bei den anderen Layouts in Vaadin durch die R
 in welcher die Components ( Textfelder und Buttons ) in das Formular eingefügt werden.
 
 \subsection{Woche 1}\label{subsec:woche1}
-In Absprache mit Gökhan stand eines der ersten Dev-Issues bereits fest: \emph{Alles} , was mit Autos
+In Absprache mit Gökhan stand eines der ersten Dev-Issues bereits fest: \emph{Alles}, was mit Autos
 zusammenhängt, muss abgewandelt oder entfernt werden.
 
 Nachdem die Erste View auf unsere App in der LoginView schon fertig war, galt es nun, diese zu verstehen und zu schauen,
@@ -30,4 +32,8 @@ Mit der Wahl von JPA war dort auch klar, dass wir einen Service und ein Reposito
 Zum Prüfen, ob eine Registrierung erfolgreich war, habe ich eine Backend-View angelegt.
 Die Backend-View verwendet das Public-App-Layout und kann somit aktuell von allen Endanwendern
 geöffnet werden.
+Wir haben uns mit dem Aufbau der Anwendung auseinandergesetzt und ungenutzte blöcken entfernt oder
+eingebunden.
 
+Mit \codeline{public static final String WELCOME\_VIEW = "welcome";} wurde die Willkommensseite
+beziehungsweise die Route für diese definiert.
