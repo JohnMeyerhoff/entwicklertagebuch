@@ -74,3 +74,37 @@ angeschlossen und die Migration auf GitLab vorbereitet.
 Der GitLab-Server ist leider nur hinter dem VPN erreichbar und war vermehrt nicht erreichbar.
 Die Issues auf GitLab haben Gökhan, Klara und ich verwendet, um Struktur zu schaffen und
 die Aufgaben zu dokumentieren.
+
+Ich habe mit dem Entwicklerteam (Sophia, Tom, Gökhan) die Entitäten aus dem ER-Diagramm
+in die Klassenhierarchie des Projekts eingebaut.
+Jede Entität hat einen eigenen Service und ein Repository.
+Der Service kontrolliert den Zugriff auf das Repository, das Repository interagiert mit der Datenbank.
+Wir haben uns als Gruppe für JPA entschlossen, dies ist JDBC in vielen Aspekten,
+besonders aber der Übersicht überlegen.
+Aufgrund von mehrfachen merge-commits welche sehr vermeidbar waren habe ich eine Entwicklerdokumentation erstellt.
+In der Entwicklerdokumentation habe ich geschildert, dass die git-config so zu verändern ist,
+dass bei einem versuchten merge-commit der git-client blocken soll.
+Dann kann man beispielsweise in GitHub Desktop den Commit zurückführen (Undo) und dann pullen.
+Danach kann der Commit wieder durchgeführt werden und es kann problemlos ein push durchgeführt werden.
+Die Datenbank wurde ab dieser Woche nur noch mit Spring JPA erstellt, indem die Flags wie folgt gesetzt
+wurden:\newline
+\codeline{spring.jpa.generate-ddl=true\newline
+spring.jpa.hibernate.ddl-auto=create-drop
+}\newline
+Diese Flags wurden in der Entwicklerdokumentation von Carlook bereits geschildert.
+DDL-auto Create-Drop ist eine Option, die die Datenbank bei jedem Start erstellt und beim Beenden
+der Anwendung wieder löscht.
+Generate ddl ist eine Option, die das Schema der Datenbank bei jedem Start erstellt.
+Hierbei wird das Schema aus den Entitäten übernommen, hier müssen also auch
+jegliche Fremdschlüsselattribute angelegt werden.
+
+Ich habe mich des Weiteren mit Selenium und dem Selenium Web Driver auseinandergesetzt.
+Der Webdriver verwendet wahlweise Google Chrome oder Firefox.
+Dabei übernimmt Selenium die Kontrolle über den Browser.
+Das Laden der URL funktionierte einwandfrei, die Dokumentation über das Warten auf die Webseite
+ließ allerdings zu wünschen übrig.
+Gleiches galt für das Adressieren von Vaadin-Elementen über deren XPath-Attribut.
+Vaadin verwendet teilweise Shadow-Dom-Elemente, welche nicht im Browser angezeigt werden.
+Dadurch konnte Selenium die Sichtbaren elemente teils nicht finden.
+
+
