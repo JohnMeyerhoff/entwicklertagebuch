@@ -34,6 +34,24 @@ Die Backend-View verwendet das Public-App-Layout und kann somit aktuell von alle
 geöffnet werden.
 Wir haben uns mit dem Aufbau der Anwendung auseinandergesetzt und ungenutzte blöcken entfernt oder
 eingebunden.
-
 Mit \codeline{public static final String WELCOME\_VIEW = "welcome";} wurde die Willkommensseite
 beziehungsweise die Route für diese definiert.
+Wir hatten uns als Team für den Namen "AcademicFlow" entschieden.
+Diesen namen habe ich überall dort eingesetzt, wo zuvor Carlook stand.
+Klara hatte zudem ein Logo entworfen, welches mit dem Namen "AcademicFlow" verknüpft wurde.
+Auf dem Logo ist ein weißer Hut in einem blauen Kreis mit einem Helleren blauen
+Kreis umrandet.
+Auch dieses Logo habe ich eingefügt.
+Ich habe die CI-Pipeline eingebaut, welche ich schon in SE01 geschrieben hatte.
+Diese Pipeline produziert zu den Markdown Dokumenten die PDF-Versionen der Dokumentation.
+Diese PDF-Versionen werden in GitHub generiert, für GitLab hat dies leider nicht funktioniert.
+
+\subsection{Woche 2}\label{subsec:woche2}
+In dieser Woche habe ich die MVC Architektur in der App durchgesetzt und alle Sources
+in die korrekten Verzeichnisse verschoben.
+Ich habe im Login-Service in der Methode \codeline{login} ergänzt, dass eine Exception
+geworfen wird, wenn die Anmeldung fehlschlägt.
+Diese kann dann im Frontend vom Usability-Team in ein Feedback für den User verarbeitet werden.
+
+
+
